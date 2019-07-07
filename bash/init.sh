@@ -23,4 +23,7 @@
 #sudo mkdir -p /usr/share/fonts/truetype/fira
 #sudo cp Fira-master/ttf/* /usr/share/fonts/truetype/fira
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+pip install --upgrade --user ase
+sudo apt install povray
