@@ -20,6 +20,8 @@ set shortmess=atI
 
 "语法高亮
 syntax on
+colorscheme onedark
+" set background=dark
 "
 ""使用vim的键盘模式
 set nocompatible
@@ -64,7 +66,7 @@ set hlsearch
 set showmatch
 
 "显示标尺，就是在右下角显示光标位置
-" set ruler
+"set ruler
 "
 ""去除vi的一致性
 set nocompatible
@@ -99,7 +101,7 @@ set showcmd
 
 
 let mapleader = " "
-" let NERDSpaceDelims=1           " 让注释符与语句之间留一个空格
+let NERDSpaceDelims=1           " 让注释符与语句之间留一个空格
 let NERDCompactSexyComs=1       " 多行注释时样子更好看
 let g:NERDDefaultAlign = 'left'  "将行注释符左对齐 
 
@@ -112,4 +114,50 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
+Plug 'vim-latex/vim-latex'
+Plug 'scrooloose/nerdcommenter'
+Plug 'joshdick/onedark.vim'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
+
+
+" vim latex
+" = = = = = = = = = = = = = = = = = = 
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+set shellslash
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+let g:Tex_CompileRule_pdf ='xelatex -interaction=nonstopmode $*'
+
+" = = = = = = = = = = = = = = = = = = = 
+
+" jedi-vim
+" = = = = = = = = = = = = = = = = = = = = = = 
+" Jedi is by default automatically initialized. If you don't want that I suggest you disable the auto-initialization in your .vimrc:
+let g:jedi#auto_initialization = 1
+
+" There are also some VIM options (like completeopt and key defaults) which are automatically initialized, but you can skip this:
+let g:jedi#auto_vim_configuration = 1
+
+" You can make jedi-vim use tabs when going to a definition etc:
+let g:jedi#use_tabs_not_buffers = 1
+
+" Jedi automatically starts the completion, if you type a dot, e.g. str., if you don't want this:
+let g:jedi#popup_on_dot = 0
+
+" Jedi selects the first line of the completion menu: for a better typing-flow and usually saves one keypress.
+let g:jedi#popup_select_first = 0
+
+" I don't want the docstring window to popup during completion
+autocmd FileType python setlocal completeopt-=preview
+" = = = = = = = = = = = = = = = = = = = = = = 
