@@ -25,7 +25,24 @@
 
 #curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# [archlinuxcn]
+# SigLevel = Never
+# Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+
+sudo pacman -Syuu
+sudo pacman -S v2ray
+sudo pacman -S chromium
+sudo pacman -S adobe-source-code-pro-fonts
+sudo pacman -S otf-fira-mono
+sudo pacman -S termite
+setxkbmap -option "ctrl:swapcaps"
+
+sudo pacman -S neovim neofetch 
+
 pip install --upgrade --user ase
-sudo apt install povray
+pip install neovim jedi flake8 autopep8 --user
+pip install matplolib numpy scipy sympy pandas jupyter --user
+
+# sudo apt install povray
 
 

@@ -61,6 +61,7 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -151,7 +152,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias javac="javac -J-Dfile.encoding=utf8"
 alias grep="grep --color=auto"
-alias vi='vim'
+alias vi='nvim'
 alias lt='ls --color -Ct'
 alias con2pos='mv CONTCAR POSCAR'
 alias ltime='grep "LOOP:  cpu time" OUTCAR | tail ' 
@@ -161,3 +162,14 @@ alias gnum='grep NIONS OUTCAR'
 alias ga='git add'
 alias gc='git commit'
 alias gs='git status'
+alias j='z'
+ 
+export PATH="/home/wu/.local/bin:$PATH"
+
+# Texlive 2019
+export MANPATH="/usr/local/texlive/2019/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH"
+export PATH="/usr/local/texlive/2019/bin/x86_64-linux:$PATH"
+
+# z jump
+. /home/wu/Documents/z/z.sh
