@@ -29,8 +29,17 @@
 # SigLevel = Never
 # Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS="@im=fcitx"
+
+git clone git@github.com:SXiangWu/config.git 
+git clone https://github.com/dikiaap/dotfiles.git
+git clone https://github.com/addy-dclxvi/i3-starterpack.git
 sudo pacman -Syuu
 sudo pacman -S v2ray
+sudo pacman -S fcitx fcitx-im fcitx-configtool
+sudo pacman -S fcitx-sogoupinyin
 sudo pacman -S chromium
 sudo pacman -S adobe-source-code-pro-fonts
 sudo pacman -S otf-fira-mono
