@@ -81,7 +81,7 @@ sudo apt install fcitx-sogoupinyin
 
 #pip install --upgrade --user ase
 #pip install neovim jedi flake8 autopep8 --user
-#pip install matplolib numpy scipy sympy pandas jupyter --user
+#pip install matplotlib numpy scipy sympy pandas jupyter --user
 
 # sudo apt install povray
 
