@@ -80,7 +80,7 @@ let g:NERDDefaultAlign = 'left'
 
 " Plugin.
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'lilydjwg/fcitx.vim'
+" Plug 'lilydjwg/fcitx.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dikiaap/minimalist'
 Plug 'editorconfig/editorconfig-vim'
@@ -134,10 +134,10 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " NERDTree.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = ''
 
 " vim-autoformat
 noremap <F3> :Neoformat<CR>
