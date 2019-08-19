@@ -47,8 +47,8 @@ sudo apt install indicator-multiload
 
 # chinese input method
 sudo apt install fcitx fcitx-im fcitx-configtool
-sudo apt install fcitc-qt
-sudo apt install fcitc-sogoupinyin
+sudo apt install fcitx-qt
+sudo apt install fcitx-sogoupinyin
 # copy following contents into /etc/profile
 # export GTK_IM_MODULE=fcitx
 # export QT_IM_MODULE=fcitx
